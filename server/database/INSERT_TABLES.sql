@@ -9,4 +9,3 @@ INSERT INTO canteen (hostel_id, time_open, time_close, ratings)
   
 INSERT INTO canteen (hostel_id, time_open, time_close, ratings)
   VALUES ('2', '2017-03-31 09:30:20-07', '2017-03-31 09:30:20-07', 6.9);
-  

@@ -2,12 +2,13 @@ const db = require('../api/connect');
 const helper = require('../api/helper');
 
 const getHostel = async (req, res) => {
+  let data = req.params;
   let stmt = "SELECT * FROM hostel ";
-  if (helper.checkEmptyObject(req.params)) {
+  if (helper.checkEmptyObject(data)) {
     stmt += ";";
   }
   else {
-    stmt += `WHERE hostel_number = '${req.params.id}';`;
+    stmt += `WHERE hostel_number = '${data.hostel_id}';`;
   }
   let client = await db.connect();
   client
@@ -31,7 +32,7 @@ const createHostel = async (req, res) => {
     .query(stmt, values)
     .then(result => {
       client.release();
-      return res.status(201).send({ message: "New entry created!" });
+      return res.status(201).send({status: 0, message: "New entry created!" });
     })
     .catch(error => {
       client.release();

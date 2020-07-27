@@ -10,20 +10,12 @@ CREATE TABLE IF NOT EXISTS canteen (
   hostel_id INTEGER NOT NULL,
   time_open TIMESTAMP NOT NULL,
   time_close TIMESTAMP NOT NULL,
+  accepting_orders BOOLEAN DEFAULT TRUE,
   ratings NUMERIC (3, 1) NOT NULL DEFAULT 0.0,
   PRIMARY KEY (canteen_id),
   CONSTRAINT canteen_hostel_fkey
     FOREIGN KEY (hostel_id)
       REFERENCES hostel (hostel_id)
-);
-
-CREATE TABLE IF NOT EXISTS canteen_active (
-  canteen_active_id SERIAL,
-  canteen_id INTEGER,
-  PRIMARY KEY (canteen_active_id),
-  CONSTRAINT canteen_active_canteen_fkey
-    FOREIGN KEY (canteen_id)
-      REFERENCES canteen (canteen_id)
 );
 
 CREATE TABLE IF NOT EXISTS owner (
