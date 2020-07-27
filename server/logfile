@@ -1,0 +1,19 @@
+2020-07-12 18:00:56.844 IST [13904] LOG:  starting PostgreSQL 12.3 (Ubuntu 12.3-1.pgdg18.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit
+2020-07-12 18:00:56.849 IST [13904] LOG:  listening on IPv4 address "127.0.0.1", port 5310
+2020-07-12 18:00:57.211 IST [13904] LOG:  listening on Unix socket "/home/shashankkumar/postgresql/.s.PGSQL.5310"
+2020-07-12 18:00:58.338 IST [13906] LOG:  database system was interrupted; last known up at 2020-07-09 11:18:50 IST
+2020-07-12 18:00:59.383 IST [13906] LOG:  database system was not properly shut down; automatic recovery in progress
+2020-07-12 18:00:59.445 IST [13906] LOG:  redo starts at 0/464CF18
+2020-07-12 18:00:59.445 IST [13906] LOG:  invalid record length at 0/464D000: wanted 24, got 0
+2020-07-12 18:00:59.446 IST [13906] LOG:  redo done at 0/464CFC8
+2020-07-12 18:00:59.829 IST [13904] LOG:  database system is ready to accept connections
+2020-07-12 18:02:49.333 IST [13946] ERROR:  role "labuser" already exists
+2020-07-12 18:02:49.333 IST [13946] STATEMENT:  CREATE ROLE labuser WITH SUPERUSER LOGIN;
+2020-07-12 18:04:59.729 IST [14118] ERROR:  column "now" does not exist at character 8
+2020-07-12 18:04:59.729 IST [14118] STATEMENT:  SELECT NOW
+2020-07-12 18:05:34.470 IST [14173] ERROR:  column "now" does not exist at character 8
+2020-07-12 18:05:34.470 IST [14173] STATEMENT:  SELECT NOW
+2020-07-12 18:06:57.854 IST [14262] ERROR:  syntax error at or near "SELEC" at character 1
+2020-07-12 18:06:57.854 IST [14262] STATEMENT:  SELEC NOW()
+2020-07-12 18:17:33.359 IST [14745] ERROR:  syntax error at end of input at character 12
+2020-07-12 18:17:33.359 IST [14745] STATEMENT:  SELECT NOW(
